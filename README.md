@@ -35,5 +35,5 @@ _Not required but would be interesting to see if you feel it is important or sho
 
 ## FIGMA
 
-\_If you wanted to add some front end polish there are some designs you could lean on here:
+_If you wanted to add some front end polish there are some designs you could lean on here:_
 https://www.figma.com/file/AXdabqbn3Vdy6OaPTiAzOb/Full-stack-assessment---Shop?node-id=0%3A1
