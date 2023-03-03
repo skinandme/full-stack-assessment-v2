@@ -29,7 +29,3 @@ _Not required but would be interesting to see if you feel it is important or sho
 
 \_This is the figma link for all files you might need for the assessment.
 https://www.figma.com/file/AXdabqbn3Vdy6OaPTiAzOb/Full-stack-assessment---Shop?node-id=0%3A1
-
-## How to submit
-
-Please clone this repo and then create a private repo which you can share with us. Add a PR and set @jimmycarr and @momenaas as reviewers.
