@@ -1,20 +1,28 @@
 # Skin + Me - Pairing Assessment - Full Stack
 
-At Skin + Me we believe pair-programming is a vital skill for a modern developer. Being able to work alongside someone, explaining your thought process and getting instant feedback on your coding choices can make the developer experience more efficient, results in higher code quality, improves knowledge and skill acquisition and, hopefully, is more fun.
-
-In this assessment you will be working alongside one (or two) of our developers. Don't worry, they are there help you, not trip you up. You can and should ask questions of them and they will guide you through the challenges to create something together. This assessment is as much about how you work with the team as it is your programming ability and is an opportunity for you to see if you can work with us in our (hopefully warm and welcoming) environment.
-
 ## The Task
 
-This repo contains the beginnings of a simple checkout flow (similar to one we actually use). There is a simple React front-end which has a landing page and shipping form, and a Flask back-end with some entities defined using SQLAlchemy. Your task is to connect the front-end and back-end together using REST APIs. Some of the work is already completed, but you are welcome to change or discard any pieces you see fit. You can use any resources you would normally use (e.g. Google Search, StackOverflow, etc) and obviously discuss your approaches and ideas with the developer(s) pairing with you. Good luck!
+A developer has been working through this ticket:
+
+> As a customer, I want to be able to add my address details to my order, so that I can have the product shipped to my chosen address.
+>
+> This task should include:
+>
+> - [x] ~A shipping details page built in React~
+> - [x] ~Creation of a checkout flow~
+> - [x] ~Creation of models that define the various aspects of a customer~
+> - [ ] A REST endpoint (or endpoints) that can handle the submission of the above data.
+> - [ ] Storage of the shipping details in the database.
+
+This repository contains an implementation a developer has begun to work on to deliver this ticket. There is a simple React front-end which has a landing page and shipping form, and a Flask back-end with some entities defined using SQLAlchemy. You are tasked with taking over this developers work to finish the ticket. Although some of the work is already completed, you are welcome to change or discard any pieces you see fit. You can use any resources you would normally use (e.g. Google Search, StackOverflow, etc) and feel free to reach out if you would like further guidance on the task at any point (this will not impact your assessment negatively). Good luck!
 
 ## Guidance
 
 What we’d like to see
 
-- Well structured code with thought given to reusability of components.
-- Explanations of your approach as you go.
-- README on how to start your project.
+- Well structured code with thought given to reusability (DRY programming principles).
+- Comments in your code for anything you want to convey thought process or what you might do with more time.
+- README on how to start your project, plus any other information you feel is relevant.
 - We would like you to create a private repository in your github account and commit your code to it. We would urge you to commit relatively frequently so we can get an idea of your style and approach
 
 _Not required but would be interesting to see if you feel it is important or shows off your knowledge and skillset particularly_
@@ -27,5 +35,5 @@ _Not required but would be interesting to see if you feel it is important or sho
 
 ## FIGMA
 
-\_This is the figma link for all files you might need for the assessment.
+\_If you wanted to add some front end polish there are some designs you could lean on here:
 https://www.figma.com/file/AXdabqbn3Vdy6OaPTiAzOb/Full-stack-assessment---Shop?node-id=0%3A1
