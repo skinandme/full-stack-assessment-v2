@@ -14,7 +14,7 @@ A developer has been working through this ticket:
 > - [ ] A REST endpoint (or endpoints) that can handle the submission of the above data.
 > - [ ] Storage of the shipping details in the database.
 
-This repository contains an implementation a developer has begun to work on to deliver this ticket. There is a simple React front-end which has a landing page and shipping form, and a Flask back-end with some entities defined using SQLAlchemy. You are tasked with taking over this developers work to finish the ticket. Although some of the work is already completed, you are welcome to change or discard any pieces you see fit. You can use any resources you would normally use (e.g. Google Search, StackOverflow, etc) and feel free to reach out if you would like further guidance on the task at any point (this will not impact your assessment negatively). Good luck!
+This repository contains an implementation a developer has begun to work on to deliver this ticket. There is a simple React front-end which has a landing page and shipping form, and a Flask back-end with some entities defined using SQLAlchemy. You are tasked with taking over this developer's work to finish the ticket. Although some of the work is already completed, you are welcome to change or discard any pieces you see fit. You can use any resources you would normally use (e.g. Google Search, StackOverflow, etc) and feel free to reach out if you would like further guidance on the task at any point (this will not impact your assessment negatively). Good luck!
 
 ## Guidance
 
