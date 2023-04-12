@@ -2,24 +2,28 @@
 
 ## The Task
 
-The team has been creating a new checkout flow for the website. The basic app has been built. No we need to develop the ability to add products to a basket, allow the customer to pay and then to complete the order by sending it for fulfilment in the factory.
+The team has been creating a new checkout flow for the website. The basic app has been built. Now, we need to develop the ability to add products to a basket, allow the customer to pay, and finally, enable completing the order by sending it for fulfilment in the factory.
 
-In this repository you will find a simple React front-end which has a landing page and shipping form, and a Flask back-end with some entities defined using SQLAlchemy and a simple endpoint. 
+In this repository, you will find a simple React front-end which has a landing page and a shipping form, and a Flask back-end with some entities defined using SQLAlchemy and a simple endpoint. 
 
-**In the [issues](https://github.com/skinandme/pairing-full-stack-assessment/issues) tab you will find 3 tickets of increasing difficulty for you to work through (you will have been told how many you will be expected to complete - if not, please reach out before beginning). The tasks are labeled with the order they should be completed and they should build on each other.**
+**In the [issues](https://github.com/skinandme/pairing-full-stack-assessment/issues) tab you will find 3 tickets of increasing difficulty for you to work through. Unless told differently, please complete all three for this assessment. The tasks are labeled with the order they should be completed as they build on each other.**
 
-Although some of the work is already completed, you are welcome to change or discard any pieces you see fit. You can use any resources you would normally use (e.g. Google Search, StackOverflow, etc) and feel free to reach out if you would like further guidance on the task at any point (this will not impact your assessment negatively). Also, if you have difficulty starting the project, please let us know. We wanted to give you something you can start quickly so you can get to coding, so this should work with little configuration and we are not testing you on anything in this area. We expect the overall task to take between 2-3 hours to complete. Good luck!
+Although some code is provided, you are welcome to change, replace, or discard any parts you see fit. You can use any resources you would normally use (e.g. Google Search, StackOverflow, etc) and feel free to reach out if you would like further guidance on the task at any point (this will not impact your assessment negatively).
+
+Also, if you have difficulty running the project, please let us know. We wanted to give you something to get you started quickly so you can focus on coding, so this should work with little configuration and we are not testing you on anything in this area.
+
+We expect the overall task to take between 2-3 hours to complete. Good luck!
 
 ## Further Guidance
 
-So you know what we are looking for, below is a list of the things we will be assessing this work on:
+So you know what we are looking for, the following is a list of themes we will use to assess your work.
 
 - Knowledge and understanding of Python, Relational Databases and general backend development (to a lesser extent, we will also be considering your knowledge of SQLAlchemy, Flask and potentially front-end, but this will not form the majority of the assessment).
 - Understanding of architecture and system design.
-- Clean coding standards.
+- Clean code and use of standards.
 - Awareness of testing and testability.
 - Consideration given to productionisation.
-- Comments in your code for anything you want to convey your thought process or what you might do with more time.
+- Comments in your code for anything you want to convey your thought process or what you might do given more time.
 - README on how to start your project, plus any other information you feel is relevant.
 - We would like you to create a private repository in your github account and commit your code to it. We would urge you to commit relatively frequently so we can get an idea of your style and approach
 
