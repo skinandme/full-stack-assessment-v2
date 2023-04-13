@@ -31,7 +31,7 @@ _Not required but would be interesting to see if you feel it is important or sho
 
 - _Unit tests_
 - _Dockerisation of front end application_
-- _Integration with 3rd party services_
+- _Integration with 3rd party services (e.g. Stripe - https://github.com/stripe/stripe-mock)_
 - _Running the application in the cloud_
 - _A/B testing_
 
