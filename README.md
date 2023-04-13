@@ -1,4 +1,4 @@
-# Skin + Me - Pairing Assessment - Full Stack
+# Skin + Me - Tech Assessment - Full Stack
 
 ## The Task
 
