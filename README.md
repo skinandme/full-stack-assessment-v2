@@ -8,11 +8,11 @@ In this repository, you will find a simple React front-end which has a landing p
 
 **In the [issues](https://github.com/skinandme/pairing-full-stack-assessment/issues) tab you will find 3 tickets of increasing difficulty for you to work through. Unless told differently, please complete all three for this assessment. The tasks are labeled with the order they should be completed as they build on each other.**
 
-Although some code is provided, you are welcome to change, replace, or discard any parts you see fit. You can use any resources you would normally use (e.g. Google Search, StackOverflow, etc) and feel free to reach out if you would like further guidance on the task at any point (this will not impact your assessment negatively). **The React front-end is provided for your convenience. If you are not comfortable with React or any front-end technologies, you are welcome to not use any and either stub endpoints or provide a Postman collection (or equivalent) for running your code.**
+Although some code is provided, you are welcome to change, replace, or discard any parts you see fit. You can use any resources you would normally use (e.g. Google Search, StackOverflow, etc) and feel free to reach out if you would like further guidance on the task at any point (this will not impact your assessment negatively). **The React front-end is provided for your convenience. If you are not comfortable with React, or any front-end technologies, you are welcome to not use any and instead either stub endpoints or provide a Postman collection (or equivalent) for running your code.**
 
 If you have difficulty running the project, please let us know. We wanted to give you something to get you started quickly so you can focus on coding, so this should work with little configuration and we are not testing you on anything in this area.
 
-We expect the overall tasks to take between 2-3 hours to complete. Please do not worry if completing all tasks in this time is not possible. Get as far as you can and we can discuss. We would also be happy to see comments sudo code for any areas you do not have time to explore. Good luck!
+We expect the overall tasks to take between 2-3 hours to complete. Please do not worry if completing all tasks in this time is not possible. Get as far as you can and we can discuss. We would also be happy to see comments/pseudocode for any areas you do not have time to explore. Good luck!
 
 ## Further Guidance
 
