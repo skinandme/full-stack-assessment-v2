@@ -11,7 +11,7 @@ Use either of the following local or docker instructions
 
 ### Local
 #### Setup
-* `python3 -m venv .venv`
+* `python3.9 -m venv .venv`  # adjust here and in Dockerfile if you want to use a different version number
 * `source .venv/bin/activate`
 * `pip install -r requirements.txt`
 * `make local-reset-db`
