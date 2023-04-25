@@ -6,7 +6,7 @@ const ShippingDetailsForm: React.FC<{
   onSuccess: (nextPage: string) => void;
 }> = ({ onSuccess }) => {
   const [shippingData, setShippingData] = React.useState({
-    address: { line_1: "", country: "", postcode: "" },
+    address: { line_1: "", line_2: "", country: "", postcode: "", city: "" },
     customer: { email: "", first_name: "", last_name: "" },
   });
 

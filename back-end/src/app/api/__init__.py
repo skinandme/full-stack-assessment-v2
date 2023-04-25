@@ -1,6 +1,6 @@
 from flask import Blueprint, request
 
-from app.api.handlers.shipping import handle
+#from app.api.handlers.shipping import handle
 
 
 def create_blueprint() -> Blueprint:
