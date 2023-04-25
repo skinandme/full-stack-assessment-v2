@@ -12,7 +12,7 @@ Although some code is provided, you are welcome to change, replace, or discard a
 
 If you have difficulty running the project, please let us know. We wanted to give you something to get you started quickly so you can focus on coding, so this should work with little configuration and we are not testing you on anything in this area.
 
-We expect the overall tasks to take between 2-3 hours to complete. Please do not worry if completing all tasks in this time is not possible. Get as far as you can and we can discuss. We would also be happy to see comments/pseudocode for any areas you do not have time to explore. Good luck!
+We expect the overall tasks to take between 4-6 hours to complete. Please do not worry if completing all tasks in this time is not possible. Get as far as you can and we can discuss. We would also be happy to see comments/pseudocode for any areas you do not have time to explore. Good luck!
 
 ## Further Guidance
 
