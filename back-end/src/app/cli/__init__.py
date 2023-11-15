@@ -5,7 +5,9 @@ from flask.cli import with_appcontext
 
 from app.core.db import db
 from app.cli.seeds import products
+from logging import Logger
 
+logger = Logger(__name__)
 
 def create_cli_blueprint() -> Blueprint:
     bp = Blueprint('cli', __name__)
@@ -22,14 +24,13 @@ def create_cli_blueprint() -> Blueprint:
 
     @with_appcontext
     @bp.cli.command('seed-db')
-    def seed_db_command():
-        from app.api.products.models.product import Product
-        
+    def seed_db_command():        
         for product in products.data:
             try:
               db.session.add(product)
               db.session.commit()
-            except (OperationalError, IntegrityError):
+            except (OperationalError, IntegrityError) as e:
+                logger.error(f"\nIGNORING EXCEPTION: \n\n{e}")
                 continue
 
     return bp
