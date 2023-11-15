@@ -1,16 +1,29 @@
-from flask import Blueprint, request
+from sqlalchemy.orm import Session
+from flask import Blueprint
+from app.api.health_checks.views import HealthChecksView
 
-#from app.api.handlers.shipping import handle
+from app.api.checkouts.views import (
+  CheckoutsIndexView,
+  CheckoutsView,
+  CheckoutItemsIndexView,
+  CheckoutItemsView
+)
 
+from app.api.checkouts.services import (
+  CheckoutsService,
+  CheckoutItemsService
+)
 
-def create_blueprint() -> Blueprint:
-    bp = Blueprint("api", __name__)
+def create_api_blueprint(db_session: Session) -> Blueprint:
+    bp = Blueprint('api', __name__)
 
-    @bp.route("/foo")
-    def test_route():
-        return "bar"
+    checkouts_service = CheckoutsService(session=db_session)
+    checkout_items_service = CheckoutItemsService(session=db_session)
+
+    bp.add_url_rule('/health_checks', view_func=HealthChecksView.as_view('health_checks'))
+    bp.add_url_rule('/checkouts', view_func=CheckoutsIndexView.as_view(name='checkouts_index', service=checkouts_service))
+    bp.add_url_rule('/checkouts/<int:id>', view_func=CheckoutsView.as_view(name='checkouts', service=checkouts_service))
+    bp.add_url_rule('/checkout_items', view_func=CheckoutItemsIndexView.as_view(name='checkout_items_index', service=checkout_items_service))
+    bp.add_url_rule('/checkout_items/<int:id>', view_func=CheckoutItemsView.as_view('checkout_items', service=checkout_items_service))
 
     return bp
-
-
-blueprint = create_blueprint()
