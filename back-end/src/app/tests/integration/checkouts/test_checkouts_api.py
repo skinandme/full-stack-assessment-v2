@@ -63,6 +63,7 @@ def test_get_checkout_with_items(client: FlaskClient, session: Session, product:
     assert res.json["id"] is not None
     assert res.json["currency"] == "GBP"
     assert res.json["sub_total"] == 4000
+    assert res.json["total"] == 4000
     assert len(res.json["items"]) == 1
     assert res.json["items"][0]["quantity"] == 2
     assert res.json["items"][0]["sub_total"] == 4000
@@ -84,3 +85,5 @@ def test_create_checkout(client: FlaskClient):
     assert res.json["id"] is not None
     assert res.json["currency"] == "GBP"
     assert res.json["items"] == []
+    assert res.json["sub_total"] == 0
+    assert res.json["total"] == 0

@@ -28,13 +28,20 @@ class Checkout(BaseModel):
           ]).where(
               CheckoutItem.checkout_id == cls.id
           ).as_scalar()
-
+    
+    @hybrid_property
+    def total(self):
+        """Calculates the total checkout value
+        """
+        return self.sub_total
+    
     def as_dict(self):
         return {
             "id": self.id,
             "currency": self.currency,
             "items": [item.as_dict() for item in self.items],
             "sub_total": self.sub_total,
+            "total": self.total,
             "created_at": self.created_at,
             "updated_at": self.updated_at,
         }
