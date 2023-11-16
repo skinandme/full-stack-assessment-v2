@@ -19,7 +19,7 @@ seed-db: ## Seed the local db
 
 .PHONY: dev
 dev: ## Run the app in development mode
-	PYTHONPATH=src FLASK_APP=app:app FLASK_ENV=development flask run --host 0.0.0.0 --port 9000
+	PYTHONPATH=src FLASK_APP=app:app FLASK_ENV=development flask run --host 0.0.0.0 --port 9000 --with-threads
 
 .PHONY: test
 test: ## Run the tests
