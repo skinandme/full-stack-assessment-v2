@@ -1,9 +1,10 @@
 import { ICheckout } from "../../../types";
 import { TCheckoutAction } from "../../../reducers/checkout-reducer";
 import CheckoutLineItem from "../../molecules/CheckoutLineItem/CheckoutLineItem";
+import { updateCheckoutItem } from "../../../api/checkout-items";
 
 export interface IOrderSummaryProps
-	extends Partial<Pick<ICheckout, "items" | "currency">> {
+	extends Pick<ICheckout, "items" | "currency"> {
 	title: string;
 	dispatch: React.Dispatch<TCheckoutAction>;
 }
@@ -33,13 +34,19 @@ export default function OrderSummary({
 								key={item.id}
 								item={item}
 								currency={currency}
-								onChangeQuantity={(e) =>
-									dispatch({
-										type: "UPDATE_CHECKOUT_ITEM",
+								onChangeQuantity={(e) => {
+									updateCheckoutItem({
 										checkoutItemId: item.id,
-										quantity: parseInt(e.target.value, 10),
+										quantity: parseInt(e.target.value),
 									})
-								}
+										.then((checkout) => {
+											dispatch({
+												type: "UPDATE_CHECKOUT",
+												checkout,
+											});
+										})
+										.catch(console.error);
+								}}
 							/>
 						))}
 					</tbody>

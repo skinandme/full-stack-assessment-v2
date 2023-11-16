@@ -1,42 +1,33 @@
 import { useReducer } from "react";
 import checkoutReducer, {
 	ICheckoutReducer,
+	ICheckoutState,
 } from "../reducers/checkout-reducer";
 import CheckoutSummary from "../components/organisms/CheckoutSummary/CheckoutSummary";
 import CheckoutTotals from "../components/organisms/CheckoutTotals/CheckoutTotals";
 import Discount from "../components/molecules/Discount/Discount";
 import Button from "../components/atoms/Button";
 import { formatPrice } from "../utils/money";
-import { createCheckout } from "../api/checkouts";
+import { initialiseCheckout } from "../services/initalise-checkout";
 
 export interface ICheckoutPageProps {
 	title: string;
 }
 
 export default function Checkout({ title }: ICheckoutPageProps) {
+	const initialCheckoutState: ICheckoutState = {
+		checkout: {
+			id: 0,
+			currency: "GBP",
+			items: [],
+			sub_total: 0,
+			total: 0,
+		},
+	};
+
 	const [{ checkout }, dispatch] = useReducer<ICheckoutReducer>(
 		checkoutReducer,
-		{
-			checkout: {
-				id: 1,
-				currency: "GBP",
-				items: [
-					{
-						id: 1,
-						product: {
-							id: 1,
-							sku: "NIA",
-							name: "Niacinamide",
-							unit_price: 2000,
-						},
-						quantity: 2,
-						sub_total: 4000,
-					},
-				],
-				sub_total: 4000,
-				total: 4000,
-			},
-		}
+		initialCheckoutState
 	);
 
 	return (
@@ -47,15 +38,19 @@ export default function Checkout({ title }: ICheckoutPageProps) {
 				<Button
 					label="Create a new checkout"
 					onClick={async () => {
-						createCheckout({ currency: "GBP" }).then(console.log);
+						initialiseCheckout({ currency: "GBP" })
+							.then((checkout) =>
+								dispatch({ type: "INITIALISE_CHECKOUT", checkout })
+							)
+							.catch(console.error);
 					}}
 				/>
 			</div>
 			<div>
 				<CheckoutSummary
 					title="Your order"
-					items={checkout?.items}
-					currency={checkout?.currency}
+					items={checkout.items}
+					currency={checkout.currency}
 					dispatch={dispatch}
 				/>
 				<Discount />
@@ -65,19 +60,19 @@ export default function Checkout({ title }: ICheckoutPageProps) {
 						{
 							label: "Sub-total",
 							amount: formatPrice({
-								amount: checkout?.sub_total,
-								currency: checkout?.currency,
+								amount: checkout.sub_total,
+								currency: checkout.currency,
 							}),
 						},
 						{
 							label: "Discount total",
-							amount: formatPrice({ amount: 0, currency: checkout?.currency }),
+							amount: formatPrice({ amount: 0, currency: checkout.currency }),
 						},
 						{
 							label: "Total",
 							amount: formatPrice({
-								amount: checkout?.total,
-								currency: checkout?.currency,
+								amount: checkout.total,
+								currency: checkout.currency,
 							}),
 						},
 					]}

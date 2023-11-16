@@ -1,18 +1,17 @@
 import { ICheckout } from "../types";
 
 export interface ICheckoutState {
-	checkout?: ICheckout;
+	checkout: ICheckout;
 }
 
 interface ICreateCheckoutAction {
-	type: "CREATE_CHECKOUT";
+	type: "INITIALISE_CHECKOUT";
 	checkout: ICheckout;
 }
 
 interface IUpdateCheckoutItemAction {
-	type: "UPDATE_CHECKOUT_ITEM";
-	checkoutItemId: number;
-	quantity: number;
+	type: "UPDATE_CHECKOUT";
+	checkout: ICheckout;
 }
 
 export type TCheckoutAction = ICreateCheckoutAction | IUpdateCheckoutItemAction;
@@ -26,10 +25,10 @@ export default function checkoutReducer(
 	action: TCheckoutAction
 ) {
 	switch (action.type) {
-		case "CREATE_CHECKOUT":
+		case "INITIALISE_CHECKOUT":
 			return { ...state, checkout: action.checkout };
-		case "UPDATE_CHECKOUT_ITEM":
-			return state;
+		case "UPDATE_CHECKOUT":
+			return { ...state, checkout: action.checkout };
 		default:
 			return state;
 	}
