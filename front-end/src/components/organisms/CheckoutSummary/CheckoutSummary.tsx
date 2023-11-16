@@ -30,7 +30,6 @@ export default function OrderSummary({
 					<tbody>
 						{items.map((item) => (
 							<CheckoutLineItem
-								id={item.id}
 								key={item.id}
 								item={item}
 								currency={currency}

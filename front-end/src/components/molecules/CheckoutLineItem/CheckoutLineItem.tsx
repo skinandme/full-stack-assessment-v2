@@ -4,14 +4,12 @@ import { ICheckoutItem } from "../../../types";
 import { formatPrice } from "../../../utils/money";
 
 export interface ICheckoutLineItemProps {
-	id: number;
 	item: ICheckoutItem;
 	currency?: "GBP";
 	onChangeQuantity: ChangeEventHandler<HTMLInputElement>;
 }
 
 export default function CheckoutLineItem({
-	id,
 	item,
 	currency,
 	onChangeQuantity,
@@ -21,7 +19,6 @@ export default function CheckoutLineItem({
 			<td>{item.product.name}</td>
 			<td>
 				<NumberInput
-					htmlFor={id.toString()}
 					min="1"
 					max="10"
 					value={item.quantity}
