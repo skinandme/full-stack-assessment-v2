@@ -7,8 +7,13 @@ import CheckoutTotals from "../components/organisms/CheckoutTotals/CheckoutTotal
 import Discount from "../components/molecules/Discount/Discount";
 import Button from "../components/atoms/Button";
 import { formatPrice } from "../utils/money";
+import { createCheckout } from "../api/checkouts";
 
-export default function Checkout() {
+export interface ICheckoutPageProps {
+	title: string;
+}
+
+export default function Checkout({ title }: ICheckoutPageProps) {
 	const [{ checkout }, dispatch] = useReducer<ICheckoutReducer>(
 		checkoutReducer,
 		{
@@ -28,38 +33,57 @@ export default function Checkout() {
 						sub_total: 4000,
 					},
 				],
+				sub_total: 4000,
+				total: 4000,
 			},
 		}
 	);
 
 	return (
 		<div>
-			<h1>Review your order</h1>
-			<CheckoutSummary
-				title="Your order"
-				items={checkout?.items}
-				currency={checkout?.currency}
-				dispatch={dispatch}
-			/>
-			<Discount />
-			<CheckoutTotals
-				title="Order total"
-				totals={[
-					{
-						label: "Sub-total",
-						amount: formatPrice({ amount: 4000, currency: "GBP" }),
-					},
-					{
-						label: "Discount total",
-						amount: formatPrice({ amount: 0 }),
-					},
-					{
-						label: "Total",
-						amount: formatPrice({ amount: 4000, currency: "GBP" }),
-					},
-				]}
-			/>
-			<Button label="Place Order" onClick={() => console.log("")} />
+			{title ? <h1>{title}</h1> : null}
+			<div>
+				<h2>Simulate a checkout</h2>
+				<Button
+					label="Create a new checkout"
+					onClick={async () => {
+						createCheckout({ currency: "GBP" }).then(console.log);
+					}}
+				/>
+			</div>
+			<div>
+				<CheckoutSummary
+					title="Your order"
+					items={checkout?.items}
+					currency={checkout?.currency}
+					dispatch={dispatch}
+				/>
+				<Discount />
+				<CheckoutTotals
+					title="Order total"
+					totals={[
+						{
+							label: "Sub-total",
+							amount: formatPrice({
+								amount: checkout?.sub_total,
+								currency: checkout?.currency,
+							}),
+						},
+						{
+							label: "Discount total",
+							amount: formatPrice({ amount: 0, currency: checkout?.currency }),
+						},
+						{
+							label: "Total",
+							amount: formatPrice({
+								amount: checkout?.total,
+								currency: checkout?.currency,
+							}),
+						},
+					]}
+				/>
+				<Button label="Place Order" onClick={() => console.log(checkout)} />
+			</div>
 		</div>
 	);
 }

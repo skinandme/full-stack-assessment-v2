@@ -3,7 +3,7 @@ import Checkout from "./pages/Checkout";
 function App() {
 	return (
 		<main>
-			<Checkout />
+			<Checkout title="Review your order" />
 		</main>
 	);
 }
