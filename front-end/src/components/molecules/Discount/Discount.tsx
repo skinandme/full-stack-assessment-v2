@@ -1,9 +1,11 @@
-import style from "./Discount.module.css";
+import Button from "../../atoms/Button";
 
 export default function Discount() {
 	return (
-		<div className={style.discount}>
-			<span>Insert your discount control here</span>
+		<div>
+			<h2>Discount code</h2>
+			<input type="text" placeholder="Discount code" />
+			<Button label="Apply discount" />
 		</div>
 	);
 }
