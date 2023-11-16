@@ -1,12 +1,12 @@
 import { ChangeEventHandler } from "react";
-import NumberInput from "../../atoms/NumberInput";
+import SelectInput from "../../atoms/SelectInput";
 import { ICheckoutItem } from "../../../types";
 import { formatPrice } from "../../../utils/money";
 
 export interface ICheckoutLineItemProps {
 	item: ICheckoutItem;
-	currency?: "GBP";
-	onChangeQuantity: ChangeEventHandler<HTMLInputElement>;
+	currency: "GBP";
+	onChangeQuantity: ChangeEventHandler<HTMLSelectElement>;
 }
 
 export default function CheckoutLineItem({
@@ -14,14 +14,20 @@ export default function CheckoutLineItem({
 	currency,
 	onChangeQuantity,
 }: ICheckoutLineItemProps) {
+	const name = `${item.product.sku}-quantity`;
+	const options = Array.from({ length: 10 }, (_, index) => ({
+		value: index + 1,
+		label: (index + 1).toString(),
+	}));
+
 	return (
 		<tr>
 			<td>{item.product.name}</td>
 			<td>
-				<NumberInput
-					min="1"
-					max="10"
+				<SelectInput
+					name={name}
 					value={item.quantity}
+					options={options}
 					onChange={onChangeQuantity}
 				/>
 			</td>
