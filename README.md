@@ -1,18 +1,69 @@
 # Skin + Me - Tech Assessment - Full Stack
 
+We have recently launched a new online shop. So far, our shop has been performing really well. In our most recent planning workshop, our growth team came up with a new idea we think will delight our customers and help us grow as a business.
+
+### Hypothesis
+
+> We believe that offering discounts will encourage people to try new products when they order.
+
+We want to **test this idea quickly and improve it one step at a time**. You have been given the role of engineering lead for this project.
+
+## Introducing the Discounts System Epic
+
+In the planning workshop our Engineering team worked with the Growth team to define the overall vision for our discount system. This gives an overview of the full range of features we might want to build in the future.
+
+> [!INFO]
+> You are not expected to build all of these features as part of your technical test! They are provided for context to help you consider how the system might need to evolve. As you design your solution, you might want to think about how your system could support the business' desired capabilities.
+
+### Constraints
+
+Below is a list of general rules and business logic that you will need to consider as you design your solution:
+
+- Customers MUST use a valid discount code to trigger the discount.
+- Discount codes MUST be unique.
+- Applying a discount SHOULD never allow a customer's order to have a negative balance.
+- Customers SHOULD only be allowed to use one discount at a time.
+- Changing a discount code SHOULD apply and validate / re-validate the new discount.
+- Discounts SHOULD be revalidated on placing an order.
+
+### Capabilities
+
+#### Discount Management
+
+Our growth team want to be able to independently manage our discount system. Below are a list of possible future features:
+
+- See a list of active discount codes
+- See the discount code used on an order
+- Be able to create new discount codes and define how the discount should be applied
+- Be able to define custom error messages for invalid discounts
+- Be able to define custom success messages for valid discounts
+
+#### Discount application and validation
+
+The growth team want to be able to independently manage how much each discount code to applies and conditions / limits on their use. Below is a list of possible future features:
+
+- Apply a % based discount - For example 5% off
+- Apply a fixed price discount - For example £5 off
+- Apply a conditional discount based on a minimum order value - For example 5% off if you spend more than £50.
+- Apply a conditional discount based on specific products or types of products - For example £5 off if you have 2 or more of Product A in your checkout.
+- Limit the number of times a discount code can be used.
+- Limit use of a discount code after an expiry date.
+- Limit use of a discount code for people with a specific email address.
+
+> [!INFO]
+> To reiterate You are not expect to build these features! But they provide context for you to think about as you design your solution.
+
 ## The Task
 
-The team has been creating a new checkout flow for the website. The basic app has been built. Now, we need to develop the ability to add products to a basket, allow the customer to pay, and finally, enable completing the order by sending it for fulfilment in the factory.
+You will find a repo with a basic checkout page and checkouts API already built. In the issues tab you will find a ticket with the first discount feature we want to build.
 
-In this repository, you will find a simple React front-end which has a landing page and a shipping form, and a Flask back-end with some entities defined using SQLAlchemy and a simple endpoint.
+Although some code is provided, you are welcome to change, replace, or discard any parts you see fit.
 
-**In the [issues](https://github.com/skinandme/pairing-full-stack-assessment/issues) tab you will find 3 tickets of increasing difficulty for you to work through. Unless told differently, please complete all three for this assessment. The tasks are labeled with the order they should be completed as they build on each other.**
-
-Although some code is provided, you are welcome to change, replace, or discard any parts you see fit. You can use any resources you would normally use (e.g. Google Search, StackOverflow, etc) and feel free to reach out if you would like further guidance on the task at any point (this will not impact your assessment negatively). **The React front-end is provided for your convenience. If you are not comfortable with React, or any front-end technologies, you are welcome to not use any and instead either stub endpoints or provide a Postman collection (or equivalent) for running your code.**
+You can use any resources you would normally use (e.g. Google Search, StackOverflow, etc) and feel free to reach out if you would like further guidance on the task at any point (this will not impact your assessment negatively). **The React front-end is provided for your convenience. If you are not comfortable with React, or any front-end technologies, you are welcome to not use any and instead either stub endpoints or provide a Postman collection (or equivalent) for running your code.**
 
 If you have difficulty running the project, please let us know. We wanted to give you something to get you started quickly so you can focus on coding, so this should work with little configuration and we are not testing you on anything in this area.
 
-We expect the overall tasks to take between 4-6 hours to complete. Please do not worry if completing all tasks in this time is not possible. Get as far as you can and we can discuss. We would also be happy to see comments/pseudocode for any areas you do not have time to explore. Good luck!
+We expect the overall task to take between 4-6 hours to complete. Please do not worry if you can't meet all the acceptance criteria in this time. Get as far as you can and we can discuss. We would also be happy to see comments/pseudocode for any areas you do not have time to explore. Good luck!
 
 ## Further Guidance
 
@@ -31,11 +82,5 @@ _The below tasks are entirely optional and will not impact the main assessment. 
 
 - _Unit tests_
 - _Dockerisation of front end application_
-- _Integration with 3rd party services (e.g. Stripe - https://github.com/stripe/stripe-mock)_
-- _Running the application in the cloud_
+- _Frontend styling_
 - _A/B testing_
-
-## FIGMA
-
-_If you did want to add some front end polish there are some designs you could lean on here:_
-https://www.figma.com/file/AXdabqbn3Vdy6OaPTiAzOb/Full-stack-assessment---Shop?node-id=0%3A1
