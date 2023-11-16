@@ -4,12 +4,8 @@ interface ICreateCheckout {
 	currency: "GBP";
 }
 
-export async function createCheckout(
-	controller: AbortController,
-	{ currency }: ICreateCheckout
-) {
+export async function createCheckout({ currency }: ICreateCheckout) {
 	const response = await window.fetch("http://localhost:9000/checkouts", {
-		signal: controller.signal,
 		method: "POST",
 		body: JSON.stringify({ currency }),
 		headers: {
