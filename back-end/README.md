@@ -41,7 +41,7 @@ Use either of the following local or docker instructions
 - `make docker-dev`
 - access the app at `http://localhost:9000`
   - there is a health check route at `http://localhost:9000/health_checks`
-  - to view available routes run `?`
+  - to view available routes run `docker compose run --rm app flask routes`
 
 #### Test
 

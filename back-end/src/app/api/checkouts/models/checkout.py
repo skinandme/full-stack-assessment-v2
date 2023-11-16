@@ -10,7 +10,7 @@ class Checkout(BaseModel):
     A customer can add/remove items to their checkout before 
     placing an order.
     """
-    currency = Column(String, nullable=False, comment="Currency for the checkout. Format: ISO 4217 currency code")
+    currency = Column(String(3), nullable=False, comment="Currency for the checkout. Format: ISO 4217 currency code")
     items = relationship('CheckoutItem', back_populates='checkout')
 
     @hybrid_property

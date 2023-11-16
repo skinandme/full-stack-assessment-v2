@@ -31,7 +31,19 @@ docker-init: ## Build the docker container(s)
 
 .PHONY: docker-dev
 docker-dev: ## Run the project with docker compose
-	docker-compose up -d
+	docker-compose up
+
+.PHONY: docker-reset-db
+docker-reset-db: ## Reset the database in docker
+	docker compose run --rm app flask cli create-db --drop-existing
+
+.PHONY: docker-seed-db
+docker-seed-db: ## Seeds the database in docker
+	docker compose run --rm app flask cli seed-db
+
+.PHONY: docker-db-shell
+docker-db-shell: ## Gives you access to a mysql shell on the db container. Find the MYSQL_PASSWORD in the docker compose file. 
+	docker compose run --rm db mysql -h db -u dev -p
 
 .PHONY: docker-test
 docker-test: ## Run the tests in docker
