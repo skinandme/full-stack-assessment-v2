@@ -16,4 +16,6 @@ export interface ICheckout {
 	id: number;
 	currency: "GBP";
 	items: ICheckoutItem[];
+	sub_total: number;
+	total: number;
 }
