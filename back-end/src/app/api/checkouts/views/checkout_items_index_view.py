@@ -12,7 +12,7 @@ class CheckoutItemsIndexView(MethodView):
     def post(self):
       try:
         item = self.service.create(**request.json)
-        return jsonify(item.as_dict()), 201
+        return jsonify(item.checkout.as_dict()), 201
       except NotFoundError as e:
         return jsonify({
           "error": {

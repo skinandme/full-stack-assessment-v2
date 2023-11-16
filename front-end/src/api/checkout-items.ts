@@ -1,8 +1,10 @@
 import { defaultHeaders } from "./defaults";
+import { ICheckout } from "../types";
 
 interface ICreateCheckoutItem {
 	checkoutId: number;
-	sku: string;
+	productId: number;
+	quantity: number;
 }
 
 interface IUpdateCheckoutItem {
@@ -12,16 +14,18 @@ interface IUpdateCheckoutItem {
 
 export async function createCheckoutItem({
 	checkoutId,
-	sku,
-}: ICreateCheckoutItem) {
-	const response = await window.fetch("http://localhost:9000/checkout_items", {
+	productId,
+	quantity,
+}: ICreateCheckoutItem): Promise<ICheckout> {
+	const response = await window.fetch("http://127.0.0.1:9000/checkout_items", {
 		method: "POST",
 		headers: {
 			...defaultHeaders,
 		},
 		body: JSON.stringify({
-			checkoutId,
-			sku: sku,
+			checkout_id: checkoutId,
+			product_id: productId,
+			quantity,
 		}),
 	});
 	return response.json();
@@ -30,9 +34,9 @@ export async function createCheckoutItem({
 export async function updateCheckoutItem({
 	checkoutItemId,
 	quantity,
-}: IUpdateCheckoutItem) {
+}: IUpdateCheckoutItem): Promise<ICheckout> {
 	const response = await window.fetch(
-		`http://localhost:9000/checkout_items/${checkoutItemId}`,
+		`http://127.0.0.1:9000/checkout_items/${checkoutItemId}`,
 		{
 			method: "PUT",
 			headers: {

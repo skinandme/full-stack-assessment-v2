@@ -31,7 +31,7 @@ def test_create_checkout_item(client: FlaskClient, session: Session, checkout: C
     })
 
     assert res.status_code == 201
-    assert res.json["product"]["sku"] == "NIACINAMIDE_NIGHT_CREAM"
+    assert res.json["items"][0]["product"]["sku"] == "NIACINAMIDE_NIGHT_CREAM"
 
 
 def test_missing_checkout_raises_404(client: FlaskClient, session: Session, product: Product):
@@ -78,6 +78,6 @@ def test_update_checkout_item(client: FlaskClient, checkout: Checkout, product: 
     })
     
     assert res.status_code == 200
-    assert res.json["product"]["sku"] == "NIACINAMIDE_NIGHT_CREAM"
-    assert res.json["quantity"] == 9
-    assert res.json["sub_total"] == 18000
+    assert res.json["items"][0]["product"]["sku"] == "NIACINAMIDE_NIGHT_CREAM"
+    assert res.json["items"][0]["quantity"] == 9
+    assert res.json["items"][0]["sub_total"] == 18000

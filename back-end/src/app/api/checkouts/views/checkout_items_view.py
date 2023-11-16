@@ -13,6 +13,6 @@ class CheckoutItemsView(MethodView):
           item_id=id,
           **request.json,
         )
-        return jsonify(item.as_dict()), 200
+        return jsonify(item.checkout.as_dict()), 200
 
 
