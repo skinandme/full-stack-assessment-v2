@@ -2,7 +2,8 @@ FROM python:3.10.4-slim
 
 WORKDIR /app
 
-RUN apt-get update && apt-get -y install gcc libmariadb-dev 
+RUN apt-get update\
+  && apt-get -y install gcc libmariadb-dev
 
 COPY src src
 COPY Makefile Makefile

@@ -22,8 +22,8 @@ Use either of the following local or docker instructions
 
 #### Run
 
-- `make dev`
-- access the app at `http://localhost:9000`
+- Run `make dev` to start the app server
+- Access the app at `http://localhost:9000`
   - there is a health check route at `http://localhost:9000/health_checks`
   - to view available routes run `PYTHONPATH=src FLASK_APP=app:app flask routes`
 
@@ -35,21 +35,20 @@ Use either of the following local or docker instructions
 
 #### Setup
 
-- `make docker-init`
-- `make docker-reset-db`
-- `make docker-seed-db`
+- Run `make docker-init` to build the container
+- Run `make docker-dev` to start the container
+
+In another terminal
+
+- Run `make docker-reset-db` to set up the database
+- Run `make docker-seed-db` to seed the database
 
 #### Run
 
-- `make docker-dev`
-- access the app at `http://localhost:9000`
+- Access the app at `http://localhost:9000`
   - there is a health check route at `http://localhost:9000/health_checks`
   - to view available routes run `docker compose run --rm app flask routes`
 
 #### Test
 
 - `make docker-test`
-
-#### Access a MySQL shell
-
-- To can access a MySQL shell in the db container run `make docker-db-shell`
