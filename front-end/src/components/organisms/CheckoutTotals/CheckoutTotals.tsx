@@ -3,12 +3,15 @@ export interface ITotal {
 	amount: string;
 }
 
-export interface IOrderTotalsProps {
+export interface ICheckoutTotalsProps {
 	title: string;
 	totals: ITotal[];
 }
 
-export default function OrderTotals({ title, totals }: IOrderTotalsProps) {
+export default function CheckoutTotals({
+	title,
+	totals,
+}: ICheckoutTotalsProps) {
 	return (
 		<div>
 			{title ? <h2>{title}</h2> : null}

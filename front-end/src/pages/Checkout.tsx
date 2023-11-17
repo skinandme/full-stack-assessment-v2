@@ -38,11 +38,12 @@ export default function Checkout({ title }: ICheckoutPageProps) {
 				<Button
 					label="Create a new checkout"
 					onClick={async () => {
-						initialiseCheckout({ currency: "GBP" })
-							.then((checkout) =>
-								dispatch({ type: "INITIALISE_CHECKOUT", checkout })
-							)
-							.catch(console.error);
+						try {
+							const checkout = await initialiseCheckout({ currency: "GBP" });
+							dispatch({ type: "INITIALISE_CHECKOUT", checkout });
+						} catch (err) {
+							console.error(err);
+						}
 					}}
 				/>
 			</div>

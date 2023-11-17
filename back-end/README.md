@@ -13,11 +13,12 @@ Use either of the following local or docker instructions
 
 #### Setup
 
-- `python3.9 -m venv .venv` # adjust here and in Dockerfile if you want to use a different version number
+- `python3.10 -m venv .venv` # adjust here and in Dockerfile if you want to use a different version number
 - `source .venv/bin/activate`
 - `pip install -r requirements.txt`
 - `cp .env.example .env`
 - `make reset-db`
+- `make seed-db`
 
 #### Run
 
@@ -35,6 +36,8 @@ Use either of the following local or docker instructions
 #### Setup
 
 - `make docker-init`
+- `make docker-reset-db`
+- `make docker-seed-db`
 
 #### Run
 
@@ -46,3 +49,7 @@ Use either of the following local or docker instructions
 #### Test
 
 - `make docker-test`
+
+#### Access a MySQL shell
+
+- To can access a MySQL shell in the db container run `make docker-db-shell`

@@ -3,18 +3,18 @@ import { TCheckoutAction } from "../../../reducers/checkout-reducer";
 import CheckoutLineItem from "../../molecules/CheckoutLineItem/CheckoutLineItem";
 import { updateCheckoutItem } from "../../../api/checkout-items";
 
-export interface IOrderSummaryProps
+export interface ICheckoutSummaryProps
 	extends Pick<ICheckout, "items" | "currency"> {
 	title: string;
 	dispatch: React.Dispatch<TCheckoutAction>;
 }
 
-export default function OrderSummary({
+export default function CheckoutSummary({
 	title,
 	items,
 	currency,
 	dispatch,
-}: IOrderSummaryProps) {
+}: ICheckoutSummaryProps) {
 	return (
 		<div>
 			{title ? <h2>Your order</h2> : title}
@@ -34,18 +34,19 @@ export default function OrderSummary({
 								key={item.id}
 								item={item}
 								currency={currency}
-								onChangeQuantity={(e) => {
-									updateCheckoutItem({
-										checkoutItemId: item.id,
-										quantity: parseInt(e.target.value),
-									})
-										.then((checkout) => {
-											dispatch({
-												type: "UPDATE_CHECKOUT",
-												checkout,
-											});
-										})
-										.catch(console.error);
+								onChangeQuantity={async (e) => {
+									try {
+										const checkout = await updateCheckoutItem({
+											checkoutItemId: item.id,
+											quantity: parseInt(e.target.value),
+										});
+										dispatch({
+											type: "UPDATE_CHECKOUT",
+											checkout,
+										});
+									} catch (err) {
+										console.error(err);
+									}
 								}}
 							/>
 						))}
