@@ -1,9 +1,12 @@
 version: "3"
 services:
   app:
+    container_name: skinandme-tech-test-app
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      - SQLALCHEMY_DATABASE_URI=sqlite:///app.db
     volumes:
       - ./src:/src
     ports:
