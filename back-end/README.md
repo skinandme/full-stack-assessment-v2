@@ -3,7 +3,7 @@
 - python 3
 - bash
 - make
-- optionally - docker
+- optionally - docker and docker compose
 
 ## Quick Start
 
