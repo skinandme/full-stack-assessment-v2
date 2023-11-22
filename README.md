@@ -76,7 +76,7 @@ You can use any resources you would normally use (e.g. Google Search, StackOverf
 
 If you have difficulty running the project, please let us know. We want to give you something to get you started quickly so you can focus on coding. The repo should work with little configuration and we are not testing you on anything in this area.
 
-### How Long Should I Take?
+### How Long Should I Take?
 
 We expect the task to take between 4-6 hours to complete, but please take the time you need to make a solid submission that reflects the extent of your abilities. We would also be happy to see comments / pseudocode for any areas you do not have time to explore. Good luck!
 
