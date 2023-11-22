@@ -1,4 +1,4 @@
-# Skin + Me - Tech Assessment - Full Stack
+# Skin + Me - Full-Stack Tech Assessment
 
 ### Scenario
 
