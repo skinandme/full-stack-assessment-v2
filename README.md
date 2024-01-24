@@ -48,8 +48,8 @@ Our growth team wants to be able to manage our discount system. The following is
 
 The growth team wants to be able to manage
 
-- how much each discount code applies
-- conditions / limits on their use
+- How much each discount code applies.
+- Conditions / limits on their use.
 
 The following is a list of possible future features.
 
@@ -70,7 +70,7 @@ This repo contains a basic checkout frontend app built in React. It also include
 
 This basic code is provided for your convenience. Please don't be constrained by this and you are very welcome to change, replace, or discard any parts you see fit.
 
-In the issues tab you will find a ticket with the discount feature the team wants to ship next. The objective of this technical assessment is to complete this ticket. *Note that this will require work on both frontend and backend.*
+In the issues tab you will find a ticket with the discount feature the team wants to ship next. The objective of this technical assessment is to complete this ticket. *Note that this will require work on both backend and frontend.*
 
 You can use any resources you would normally use (e.g. Google Search, StackOverflow, etc). Feel free to reach out if you would like further guidance on the task at any point. This will not negatively impact your assessment.
 
@@ -96,8 +96,8 @@ Please aim at making a strong submission that reflects well on your knowledge an
 
 ## How to Submit
 
-- Clone the repository to your development machine
-- Create a private repository in your own GitHub account
-- Please commit often (and don't squash), this will help us understand your progress and reasoning
-- One pull request is sufficient
-- Add the reviewers as collaborators on your repository on Github
+- Clone the repository to your development machine.
+- Create a private repository in your own GitHub account.
+- Please commit often (and don't squash); this will help us better understand your progress and reasoning.
+- One pull request is sufficient.
+- Add the reviewers as collaborators on your repository on Github.
