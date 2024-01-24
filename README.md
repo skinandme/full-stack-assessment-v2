@@ -70,7 +70,7 @@ This repo contains a basic checkout frontend app built in React. It also include
 
 This basic code is provided for your convenience. Please don't be constrained by this and you are very welcome to change, replace, or discard any parts you see fit.
 
-In the issues tab you will find a ticket with the discount feature the team wants to ship next. The objective of this technical assessment is to complete this ticket. *Note that this will require work on both backend and frontend.*
+In the issues tab you will find a ticket with the discount feature the team wants to ship next. The objective of this technical assessment is to complete this ticket. **Note that this will require work on both backend and frontend.**
 
 You can use any resources you would normally use (e.g. Google Search, StackOverflow, etc). Feel free to reach out if you would like further guidance on the task at any point. This will not negatively impact your assessment.
 
