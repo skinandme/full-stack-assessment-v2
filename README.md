@@ -2,7 +2,7 @@
 
 ### Scenario
 
-We have recently launched a new online shop. So far, it has been performing really well. Our growth team came up with a new idea we think will delight our customers and help us grow as a business.
+We have recently launched a new online shop and it has been performing well. Our growth team came up with the following new idea we think will delight our customers and help us grow as a business.
 
 ### Hypothesis
 
@@ -14,7 +14,7 @@ You are the engineering lead for this project.
 
 ## Introducing the Discounts System Epic
 
-In the kickoff workshop we worked together to define the vision for our discount system. This gives an overview of the full range of discount features we might want to build in the future.
+In the kickoff workshop, we worked with the Product Manager to define the vision for our discount system. This gives an overview of the full range of discount features we might want to build in the future.
 
 > [!IMPORTANT]
 > You are not expected to build these features as part of your technical test! They provide context for the feature and simulate a real-world set of requirements. As you design your solution, think about how your system could support these needs.
@@ -66,15 +66,13 @@ The following is a list of possible future features.
 
 ## The Task
 
-This repo contains a basic checkout frontend app built in React. It also includes a basic checkout API built in Python using the Flask framework. In the issues tab you will find a ticket with the discount feature the team wants to ship.
+This repo contains a basic checkout frontend app built in React. It also includes a basic checkout API built in Python using the Flask framework.
 
-Although some code is provided, you are welcome to change, replace, or discard any parts you see fit.
+This basic code is provided for your convenience. Please don't be constrained by this and you are very welcome to change, replace, or discard any parts you see fit.
+
+In the issues tab you will find a ticket with the discount feature the team wants to ship next. The objective of this technical assessment is to complete this ticket. *Note that this will require work on both frontend and backend.*
 
 You can use any resources you would normally use (e.g. Google Search, StackOverflow, etc). Feel free to reach out if you would like further guidance on the task at any point. This will not negatively impact your assessment.
-
-**The React frontend is there for your convenience. If you are not comfortable with React, or any front-end technologies, you are welcome to not use any. Instead provide another way for reviewers to run your code. For example a Postman collection or stub endpoints.**
-
-If you have difficulty running the project, please let us know. We want to give you something to get you started quickly so you can focus on coding. The repo should work with little configuration and we are not testing you on anything in this area.
 
 ### How Long Should I Take?
 
@@ -82,13 +80,14 @@ We expect the task to take between 4-6 hours to complete, but please take the ti
 
 ## Further Guidance
 
-So you know what we are looking for, the following is a list of themes we will use to assess your work.
+Please aim at making a strong submission that reflects well on your knowledge and abilities. This is as much a coding task as it is a system design one. So you know what we are looking for, the following is a list of themes we will use to assess your work.
 
 - Knowledge and understanding of Python.
+- Knowledge and understanding of frontend development.
 - Knowledge and understanding of relational databases.
 - Understanding of architecture and system design.
 - Clean code and use of standards.
-- Awareness of testing and testability.
+- Awareness and practice of testing and testability.
 - Your use of version control for example git commit message and pull requests.
 - A clear README on how to start your project, plus any other information you feel is relevant.
 - Comments in your code for anything you want to convey your thought process or what you might do given more time.
@@ -98,8 +97,7 @@ So you know what we are looking for, the following is a list of themes we will u
 ## How to Submit
 
 - Clone the repository to your development machine
-- Create a private repository in your own Github account
-- Commit your code to this private repository
-- Feel free to break up the work into smaller tickets and pull requests
-- Create a pull request for each ticket with a comment describing your changes and decisions you made
+- Create a private repository in your own GitHub account
+- Please commit often (and don't squash), this will help us understand your progress and reasoning
+- One pull request is sufficient
 - Add the reviewers as collaborators on your repository on Github
